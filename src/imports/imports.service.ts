@@ -1,12 +1,14 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import 'multer';
+import type { Express } from 'express';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Repository } from 'typeorm';
 import { ClassEntity } from '../classes/classes.entity.js';
 import { StudentEntity } from '../students/students.entity.js';
 import { TeacherEntity } from '../teachers/teachers.entity.js';
-import { CsvParserService } from './csv-parser.service.js';
+import { CsvParserService, ParsedCsvRow } from './csv-parser.service.js';
 import { RunImportDto } from './dto/run-import.dto.js';
 import {
   FullImportReport,
@@ -58,8 +60,95 @@ export class ImportsService {
     return report;
   }
 
+  async uploadAndImport(files: Express.Multer.File[]): Promise<{
+    report: FullImportReport;
+    teachers: TeacherEntity[];
+    classes: ClassEntity[];
+    students: StudentEntity[];
+  }> {
+    if (!files || files.length === 0) {
+      throw new BadRequestException('No CSV files uploaded');
+    }
+
+    const teacherRows: ParsedCsvRow[] = [];
+    const classRows: ParsedCsvRow[] = [];
+    const studentRows: ParsedCsvRow[] = [];
+
+    for (const file of files) {
+      const content = file.buffer.toString('utf-8');
+      const rows = this.csvParser.parseString(content);
+      if (rows.length === 0) continue;
+
+      const headers = Object.keys(rows[0].raw);
+      const fileType = this.detectCsvType(file.originalname, headers);
+
+      if (fileType === 'teachers') {
+        teacherRows.push(...rows);
+      } else if (fileType === 'classes') {
+        classRows.push(...rows);
+      } else if (fileType === 'students') {
+        studentRows.push(...rows);
+      }
+    }
+
+    const teacherEntries = teacherRows.length > 0 ? await this.processTeacherRows(teacherRows) : [];
+    const classEntries = classRows.length > 0 ? await this.processClassRows(classRows) : [];
+    const studentEntries = studentRows.length > 0 ? await this.processStudentRows(studentRows) : [];
+
+    const report = this.reportService.buildReport(
+      'uploaded-files',
+      this.reportService.summarize(teacherEntries),
+      this.reportService.summarize(classEntries),
+      this.reportService.summarize(studentEntries),
+    );
+
+    await this.reportService.saveReport(report, `upload-${Date.now()}.json`);
+
+    const teachers = await this.teacherRepo.find({
+      relations: { classes: true },
+      order: { createdAt: 'ASC' },
+    });
+    const classes = await this.classRepo.find({
+      relations: { teacher: true, students: true },
+      order: { createdAt: 'ASC' },
+    });
+    const students = await this.studentRepo.find({
+      relations: { schoolClass: true },
+      order: { createdAt: 'ASC' },
+    });
+
+    return {
+      report,
+      teachers,
+      classes,
+      students,
+    };
+  }
+
+  private detectCsvType(
+    filename: string,
+    headers: string[],
+  ): 'teachers' | 'classes' | 'students' | 'unknown' {
+    const lowerName = filename.toLowerCase();
+    if (lowerName.includes('teacher')) return 'teachers';
+    if (lowerName.includes('class')) return 'classes';
+    if (lowerName.includes('student')) return 'students';
+
+    if (headers.includes('capacity') || headers.includes('max_capacity')) return 'classes';
+    if (headers.includes('class_name') || headers.includes('class')) {
+      if (headers.includes('teacher_name') || headers.includes('teacher_email')) return 'classes';
+      return 'students';
+    }
+    if (headers.includes('email') || headers.includes('teacher_email')) return 'teachers';
+    return 'unknown';
+  }
+
   private async importTeachers(filePath: string): Promise<RowReportEntry[]> {
     const parsedRows = await this.csvParser.parseFile(filePath);
+    return this.processTeacherRows(parsedRows);
+  }
+
+  private async processTeacherRows(parsedRows: ParsedCsvRow[]): Promise<RowReportEntry[]> {
     const entries: RowReportEntry[] = [];
     const seenEmailsInFile = new Map<string, string>();
 
@@ -144,6 +233,10 @@ export class ImportsService {
 
   private async importClasses(filePath: string): Promise<RowReportEntry[]> {
     const parsedRows = await this.csvParser.parseFile(filePath);
+    return this.processClassRows(parsedRows);
+  }
+
+  private async processClassRows(parsedRows: ParsedCsvRow[]): Promise<RowReportEntry[]> {
     const entries: RowReportEntry[] = [];
     const seenClassesInFile = new Set<string>();
 
@@ -250,6 +343,10 @@ export class ImportsService {
 
   private async importStudents(filePath: string): Promise<RowReportEntry[]> {
     const parsedRows = await this.csvParser.parseFile(filePath);
+    return this.processStudentRows(parsedRows);
+  }
+
+  private async processStudentRows(parsedRows: ParsedCsvRow[]): Promise<RowReportEntry[]> {
     const entries: RowReportEntry[] = [];
     const seenEmailsInFile = new Map<string, string>();
 

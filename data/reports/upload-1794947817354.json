@@ -1,0 +1,188 @@
+{
+  "executedAt": "2026-11-17T20:36:57.354Z",
+  "sourceDir": "uploaded-files",
+  "totals": {
+    "totalRows": 12,
+    "created": 0,
+    "skipped": 8,
+    "rejected": 4
+  },
+  "teachers": {
+    "totalRows": 12,
+    "created": 0,
+    "skipped": 8,
+    "rejected": 4,
+    "rows": [
+      {
+        "rowNumber": 2,
+        "status": "skipped",
+        "reason": "Teacher with email \"ahmed.hassan@example.com\" already exists in database",
+        "recordId": "7be7efad-6609-44eb-b8c9-3df297bdafcf",
+        "raw": {
+          "name": " Ahmed  Hassan ",
+          "email": " AHMED.HASSAN@example.com "
+        },
+        "normalized": {
+          "name": "Ahmed Hassan",
+          "email": "ahmed.hassan@example.com"
+        }
+      },
+      {
+        "rowNumber": 3,
+        "status": "skipped",
+        "reason": "Teacher with email \"mona.ali@example.com\" already exists in database",
+        "recordId": "a5ba7735-3904-447e-97b5-c54281701f02",
+        "raw": {
+          "name": "Mona Ali",
+          "email": "mona.ali@example.com"
+        },
+        "normalized": {
+          "name": "Mona Ali",
+          "email": "mona.ali@example.com"
+        }
+      },
+      {
+        "rowNumber": 4,
+        "status": "skipped",
+        "reason": "Teacher with email \"omar.samir@example.com\" already exists in database",
+        "recordId": "ddacb424-e3dd-421c-ae7c-838d0b18f475",
+        "raw": {
+          "name": "Omar Samir",
+          "email": "omar.samir@example.com"
+        },
+        "normalized": {
+          "name": "Omar Samir",
+          "email": "omar.samir@example.com"
+        }
+      },
+      {
+        "rowNumber": 5,
+        "status": "skipped",
+        "reason": "Teacher with email \"salma.adel@example.com\" already exists in database",
+        "recordId": "f3876452-d7cb-4097-87ca-347c44d6f8e7",
+        "raw": {
+          "name": "Salma, Adel",
+          "email": "salma.adel@example.com"
+        },
+        "normalized": {
+          "name": "Salma, Adel",
+          "email": "salma.adel@example.com"
+        }
+      },
+      {
+        "rowNumber": 6,
+        "status": "skipped",
+        "reason": "Teacher with email \"nour.one@example.com\" already exists in database",
+        "recordId": "ac2fddfa-02ee-4825-9315-73c836112e48",
+        "raw": {
+          "name": "Nour Mohamed",
+          "email": "nour.one@example.com"
+        },
+        "normalized": {
+          "name": "Nour Mohamed",
+          "email": "nour.one@example.com"
+        }
+      },
+      {
+        "rowNumber": 7,
+        "status": "skipped",
+        "reason": "Teacher with email \"nour.two@example.com\" already exists in database",
+        "recordId": "019a2dfe-2df5-46a0-953c-96aee6cc5fde",
+        "raw": {
+          "name": "Nour Mohamed",
+          "email": "nour.two@example.com"
+        },
+        "normalized": {
+          "name": "Nour Mohamed",
+          "email": "nour.two@example.com"
+        }
+      },
+      {
+        "rowNumber": 8,
+        "status": "skipped",
+        "reason": "Teacher with email \"layla.mahmoud@example.com\" already exists in database",
+        "recordId": "cdec9668-e615-4551-a6e5-a53eeef7c8a3",
+        "raw": {
+          "name": "ليلى محمود",
+          "email": "layla.mahmoud@example.com"
+        },
+        "normalized": {
+          "name": "ليلى محمود",
+          "email": "layla.mahmoud@example.com"
+        }
+      },
+      {
+        "rowNumber": 9,
+        "status": "skipped",
+        "reason": "Duplicate teacher email \"ahmed.hassan@example.com\" in CSV",
+        "raw": {
+          "name": "ahmed hassan",
+          "email": "ahmed.hassan@EXAMPLE.COM"
+        },
+        "normalized": {
+          "name": "ahmed hassan",
+          "email": "ahmed.hassan@example.com"
+        }
+      },
+      {
+        "rowNumber": 10,
+        "status": "rejected",
+        "reason": "Conflicting duplicate email \"ahmed.hassan@example.com\" in CSV (previous name: \"Ahmed Hassan\")",
+        "raw": {
+          "name": "Ahmed Hussein",
+          "email": "ahmed.hassan@example.com"
+        },
+        "normalized": {
+          "name": "Ahmed Hussein",
+          "email": "ahmed.hassan@example.com"
+        }
+      },
+      {
+        "rowNumber": 11,
+        "status": "rejected",
+        "reason": "Missing required teacher name or email",
+        "raw": {
+          "name": " ",
+          "email": "missing.name@example.com"
+        }
+      },
+      {
+        "rowNumber": 12,
+        "status": "rejected",
+        "reason": "Invalid email format: \"hany.example.com\"",
+        "raw": {
+          "name": "Hany Mostafa",
+          "email": "hany.example.com"
+        },
+        "normalized": {
+          "name": "Hany Mostafa",
+          "email": "hany.example.com"
+        }
+      },
+      {
+        "rowNumber": 13,
+        "status": "rejected",
+        "reason": "Missing required teacher name or email",
+        "raw": {
+          "name": "Rania Fathy",
+          "email": ""
+        }
+      }
+    ]
+  },
+  "classes": {
+    "totalRows": 0,
+    "created": 0,
+    "skipped": 0,
+    "rejected": 0,
+    "rows": []
+  },
+  "students": {
+    "totalRows": 0,
+    "created": 0,
+    "skipped": 0,
+    "rejected": 0,
+    "rows": []
+  },
+  "reportFile": "data/reports/upload-1794947817354.json"
+}

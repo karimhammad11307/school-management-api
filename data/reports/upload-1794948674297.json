@@ -1,0 +1,435 @@
+{
+  "executedAt": "2026-11-17T20:51:14.297Z",
+  "sourceDir": "uploaded-files",
+  "totals": {
+    "totalRows": 27,
+    "created": 15,
+    "skipped": 2,
+    "rejected": 10
+  },
+  "teachers": {
+    "totalRows": 0,
+    "created": 0,
+    "skipped": 0,
+    "rejected": 0,
+    "rows": []
+  },
+  "classes": {
+    "totalRows": 0,
+    "created": 0,
+    "skipped": 0,
+    "rejected": 0,
+    "rows": []
+  },
+  "students": {
+    "totalRows": 27,
+    "created": 15,
+    "skipped": 2,
+    "rejected": 10,
+    "rows": [
+      {
+        "rowNumber": 2,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "db534ce1-ab66-4f1c-b316-631c55bc265e",
+        "raw": {
+          "name": " Youssef  Ahmed ",
+          "email": " YOUSSEF.AHMED@example.com ",
+          "class_name": "grade 1 a"
+        },
+        "normalized": {
+          "name": "Youssef Ahmed",
+          "email": "youssef.ahmed@example.com",
+          "classId": "3a6a956c-db27-4960-9f08-631c0063e0dd"
+        }
+      },
+      {
+        "rowNumber": 3,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "ca11d69b-5991-438a-8028-0a29a178bde8",
+        "raw": {
+          "name": "Farida Mahmoud",
+          "email": "farida.mahmoud@example.com",
+          "class_name": " Grade  1 A "
+        },
+        "normalized": {
+          "name": "Farida Mahmoud",
+          "email": "farida.mahmoud@example.com",
+          "classId": "3a6a956c-db27-4960-9f08-631c0063e0dd"
+        }
+      },
+      {
+        "rowNumber": 4,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "e16d7398-6cde-41ac-bfb3-7142761c14d2",
+        "raw": {
+          "name": "Adam, Karim",
+          "email": "adam.karim@example.com",
+          "class_name": "GRADE 1 A"
+        },
+        "normalized": {
+          "name": "Adam, Karim",
+          "email": "adam.karim@example.com",
+          "classId": "3a6a956c-db27-4960-9f08-631c0063e0dd"
+        }
+      },
+      {
+        "rowNumber": 5,
+        "status": "skipped",
+        "reason": "Duplicate student email \"youssef.ahmed@example.com\" in CSV",
+        "raw": {
+          "name": "youssef ahmed",
+          "email": "youssef.ahmed@EXAMPLE.COM",
+          "class_name": "Grade 1 A"
+        },
+        "normalized": {
+          "name": "youssef ahmed",
+          "email": "youssef.ahmed@example.com"
+        }
+      },
+      {
+        "rowNumber": 6,
+        "status": "rejected",
+        "reason": "Class \"Grade 1 A\" is at full capacity (3)",
+        "raw": {
+          "name": "Malak Adel",
+          "email": "malak.adel@example.com",
+          "class_name": "Grade 1 A"
+        },
+        "normalized": {
+          "name": "Malak Adel",
+          "email": "malak.adel@example.com",
+          "classId": "3a6a956c-db27-4960-9f08-631c0063e0dd"
+        }
+      },
+      {
+        "rowNumber": 7,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "04fbc315-bb73-4e21-a576-8c295c3fb165",
+        "raw": {
+          "name": "Lina Omar",
+          "email": "lina.omar@example.com",
+          "class_name": "Grade 1 B"
+        },
+        "normalized": {
+          "name": "Lina Omar",
+          "email": "lina.omar@example.com",
+          "classId": "1b7c5eb0-bde0-4dbf-b8c4-1767713f8308"
+        }
+      },
+      {
+        "rowNumber": 8,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "2bce7b1b-79cb-422e-b59b-364e3e1dec2b",
+        "raw": {
+          "name": "Seif Mostafa",
+          "email": "seif.mostafa@example.com",
+          "class_name": "grade 1 b"
+        },
+        "normalized": {
+          "name": "Seif Mostafa",
+          "email": "seif.mostafa@example.com",
+          "classId": "1b7c5eb0-bde0-4dbf-b8c4-1767713f8308"
+        }
+      },
+      {
+        "rowNumber": 9,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "b2ffb9a5-d32f-4dfd-9079-3ba03a5d3aaa",
+        "raw": {
+          "name": "Hana Tarek",
+          "email": "hana.tarek@example.com",
+          "class_name": "Grade 1 B"
+        },
+        "normalized": {
+          "name": "Hana Tarek",
+          "email": "hana.tarek@example.com",
+          "classId": "1b7c5eb0-bde0-4dbf-b8c4-1767713f8308"
+        }
+      },
+      {
+        "rowNumber": 10,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "2e83506c-5e56-46de-a11c-8f1e2df978af",
+        "raw": {
+          "name": "Ziad Khaled",
+          "email": "ziad.khaled@example.com",
+          "class_name": "Grade 1 B"
+        },
+        "normalized": {
+          "name": "Ziad Khaled",
+          "email": "ziad.khaled@example.com",
+          "classId": "1b7c5eb0-bde0-4dbf-b8c4-1767713f8308"
+        }
+      },
+      {
+        "rowNumber": 11,
+        "status": "skipped",
+        "reason": "Duplicate student email \"lina.omar@example.com\" in CSV",
+        "raw": {
+          "name": "Lina Omar",
+          "email": "lina.omar@example.com",
+          "class_name": "Grade 2 A"
+        },
+        "normalized": {
+          "name": "Lina Omar",
+          "email": "lina.omar@example.com"
+        }
+      },
+      {
+        "rowNumber": 12,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "92875e42-c7f3-494a-894f-f640e0f99934",
+        "raw": {
+          "name": "Nada Sameh",
+          "email": "nada.sameh@example.com",
+          "class_name": "Grade 2 A"
+        },
+        "normalized": {
+          "name": "Nada Sameh",
+          "email": "nada.sameh@example.com",
+          "classId": "c6101327-df49-4f25-9e83-e2525235cda3"
+        }
+      },
+      {
+        "rowNumber": 13,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "b7fb0248-e18e-425f-9283-3a97e5cc0be5",
+        "raw": {
+          "name": "Karim Emad",
+          "email": "karim.emad@example.com",
+          "class_name": "Grade 2 A"
+        },
+        "normalized": {
+          "name": "Karim Emad",
+          "email": "karim.emad@example.com",
+          "classId": "c6101327-df49-4f25-9e83-e2525235cda3"
+        }
+      },
+      {
+        "rowNumber": 14,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "591efdfe-7391-4692-8b9f-1061bf826fff",
+        "raw": {
+          "name": "ملك أحمد",
+          "email": "malak.arabic@example.com",
+          "class_name": " Arabic  Club "
+        },
+        "normalized": {
+          "name": "ملك أحمد",
+          "email": "malak.arabic@example.com",
+          "classId": "eef36d14-1ee5-4465-9a07-88e4dd37ced7"
+        }
+      },
+      {
+        "rowNumber": 15,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "13a61cab-c67d-4e02-98a5-3f9396d8053b",
+        "raw": {
+          "name": "Amir Sherif",
+          "email": "amir.sherif@example.com",
+          "class_name": "Science Club"
+        },
+        "normalized": {
+          "name": "Amir Sherif",
+          "email": "amir.sherif@example.com",
+          "classId": "4f6ac8f3-ce75-4409-abed-22d688c66db6"
+        }
+      },
+      {
+        "rowNumber": 16,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "c772880b-8ed4-4856-8fd6-220e6a4d49a4",
+        "raw": {
+          "name": "Jana Hossam",
+          "email": "jana.hossam@example.com",
+          "class_name": "science club"
+        },
+        "normalized": {
+          "name": "Jana Hossam",
+          "email": "jana.hossam@example.com",
+          "classId": "4f6ac8f3-ce75-4409-abed-22d688c66db6"
+        }
+      },
+      {
+        "rowNumber": 17,
+        "status": "rejected",
+        "reason": "Class \"Science Club\" is at full capacity (2)",
+        "raw": {
+          "name": "Ramy Fawzy",
+          "email": "ramy.fawzy@example.com",
+          "class_name": "Science Club"
+        },
+        "normalized": {
+          "name": "Ramy Fawzy",
+          "email": "ramy.fawzy@example.com",
+          "classId": "4f6ac8f3-ce75-4409-abed-22d688c66db6"
+        }
+      },
+      {
+        "rowNumber": 18,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "539e23a1-e893-4ff5-8ed8-a1edd3a54fc2",
+        "raw": {
+          "name": "Nour Ahmed",
+          "email": "nour.ahmed@example.com",
+          "class_name": "Reading Group"
+        },
+        "normalized": {
+          "name": "Nour Ahmed",
+          "email": "nour.ahmed@example.com",
+          "classId": "3f068035-5478-4f5d-8f55-72cd58de5c5b"
+        }
+      },
+      {
+        "rowNumber": 19,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "4cddb941-adad-4ac7-ba66-8487bc470c33",
+        "raw": {
+          "name": "Tala Magdy",
+          "email": "tala.magdy@example.com",
+          "class_name": "reading group"
+        },
+        "normalized": {
+          "name": "Tala Magdy",
+          "email": "tala.magdy@example.com",
+          "classId": "3f068035-5478-4f5d-8f55-72cd58de5c5b"
+        }
+      },
+      {
+        "rowNumber": 20,
+        "status": "rejected",
+        "reason": "Class \"Art Club\" not found",
+        "raw": {
+          "name": "Hassan Ali",
+          "email": "hassan.ali@example.com",
+          "class_name": "Art Club"
+        },
+        "normalized": {
+          "name": "Hassan Ali",
+          "email": "hassan.ali@example.com"
+        }
+      },
+      {
+        "rowNumber": 21,
+        "status": "rejected",
+        "reason": "Class \"Grade 9 Z\" not found",
+        "raw": {
+          "name": "Dina Ashraf",
+          "email": "dina.ashraf@example.com",
+          "class_name": "Grade 9 Z"
+        },
+        "normalized": {
+          "name": "Dina Ashraf",
+          "email": "dina.ashraf@example.com"
+        }
+      },
+      {
+        "rowNumber": 22,
+        "status": "rejected",
+        "reason": "Class \"Grade 1-A\" not found",
+        "raw": {
+          "name": "Kareem Sameh",
+          "email": "kareem.sameh@example.com",
+          "class_name": "Grade 1-A"
+        },
+        "normalized": {
+          "name": "Kareem Sameh",
+          "email": "kareem.sameh@example.com"
+        }
+      },
+      {
+        "rowNumber": 23,
+        "status": "rejected",
+        "reason": "Missing required student name or email",
+        "raw": {
+          "name": " ",
+          "email": "blank.name@example.com",
+          "class_name": "Arabic Club"
+        }
+      },
+      {
+        "rowNumber": 24,
+        "status": "rejected",
+        "reason": "Invalid email format: \"aya.hesham.example.com\"",
+        "raw": {
+          "name": "Aya Hesham",
+          "email": "aya.hesham.example.com",
+          "class_name": "Arabic Club"
+        },
+        "normalized": {
+          "name": "Aya Hesham",
+          "email": "aya.hesham.example.com"
+        }
+      },
+      {
+        "rowNumber": 25,
+        "status": "rejected",
+        "reason": "Missing required student name or email",
+        "raw": {
+          "name": "Mostafa Walid",
+          "email": "",
+          "class_name": "Grade 2 A"
+        }
+      },
+      {
+        "rowNumber": 26,
+        "status": "rejected",
+        "reason": "Missing class name",
+        "raw": {
+          "name": "Heba Nabil",
+          "email": "heba.nabil@example.com",
+          "class_name": ""
+        },
+        "normalized": {
+          "name": "Heba Nabil",
+          "email": "heba.nabil@example.com"
+        }
+      },
+      {
+        "rowNumber": 27,
+        "status": "rejected",
+        "reason": "Invalid email format: \"rana nabil@example.com\"",
+        "raw": {
+          "name": "Rana Nabil",
+          "email": "rana nabil@example.com",
+          "class_name": "Grade 2 A"
+        },
+        "normalized": {
+          "name": "Rana Nabil",
+          "email": "rana nabil@example.com"
+        }
+      },
+      {
+        "rowNumber": 28,
+        "status": "created",
+        "reason": "Created student",
+        "recordId": "ea69d601-5bce-4299-b353-deb3a2087108",
+        "raw": {
+          "name": "Aya Hesham",
+          "email": "aya.hesham@example.com",
+          "class_name": "Arabic Club"
+        },
+        "normalized": {
+          "name": "Aya Hesham",
+          "email": "aya.hesham@example.com",
+          "classId": "eef36d14-1ee5-4465-9a07-88e4dd37ced7"
+        }
+      }
+    ]
+  },
+  "reportFile": "data/reports/upload-1794948674297.json"
+}

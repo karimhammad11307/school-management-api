@@ -1,0 +1,258 @@
+{
+  "executedAt": "2026-11-17T20:49:27.391Z",
+  "sourceDir": "uploaded-files",
+  "totals": {
+    "totalRows": 15,
+    "created": 0,
+    "skipped": 9,
+    "rejected": 6
+  },
+  "teachers": {
+    "totalRows": 0,
+    "created": 0,
+    "skipped": 0,
+    "rejected": 0,
+    "rows": []
+  },
+  "classes": {
+    "totalRows": 15,
+    "created": 0,
+    "skipped": 9,
+    "rejected": 6,
+    "rows": [
+      {
+        "rowNumber": 2,
+        "status": "skipped",
+        "reason": "Class \"Grade 1 A\" already exists in database",
+        "recordId": "210f1f4f-6e54-4604-8270-76a96cdd5266",
+        "raw": {
+          "name": " Grade  1 A ",
+          "capacity": "03",
+          "teacher_name": "ahmed hassan",
+          "teacher_email": "AHMED.HASSAN@example.com"
+        },
+        "normalized": {
+          "name": "Grade 1 A",
+          "capacity": 3
+        }
+      },
+      {
+        "rowNumber": 3,
+        "status": "skipped",
+        "reason": "Class \"Grade 1 B\" already exists in database",
+        "recordId": "032d14a1-83b2-4bb5-adaf-95f37afaf3c9",
+        "raw": {
+          "name": "Grade 1 B",
+          "capacity": "4",
+          "teacher_name": " Mona  Ali ",
+          "teacher_email": " mona.ali@example.com "
+        },
+        "normalized": {
+          "name": "Grade 1 B",
+          "capacity": 4
+        }
+      },
+      {
+        "rowNumber": 4,
+        "status": "skipped",
+        "reason": "Class \"Grade 2 A\" already exists in database",
+        "recordId": "41a42d07-da43-4edc-ab7a-49ed03904cf7",
+        "raw": {
+          "name": "Grade 2 A",
+          "capacity": "3",
+          "teacher_name": "Omar Samir",
+          "teacher_email": "omar.samir@example.com"
+        },
+        "normalized": {
+          "name": "Grade 2 A",
+          "capacity": 3
+        }
+      },
+      {
+        "rowNumber": 5,
+        "status": "skipped",
+        "reason": "Class \"Science Club\" already exists in database",
+        "recordId": "6a02a797-7810-43d9-976f-c43193588242",
+        "raw": {
+          "name": "Science Club",
+          "capacity": "2",
+          "teacher_name": "Salma, Adel",
+          "teacher_email": "salma.adel@example.com"
+        },
+        "normalized": {
+          "name": "Science Club",
+          "capacity": 2
+        }
+      },
+      {
+        "rowNumber": 6,
+        "status": "skipped",
+        "reason": "Class \"Reading Group\" already exists in database",
+        "recordId": "13d37050-d2fc-421c-b10e-924174da7c7c",
+        "raw": {
+          "name": "Reading Group",
+          "capacity": "2",
+          "teacher_name": "Nour Mohamed",
+          "teacher_email": "nour.two@example.com"
+        },
+        "normalized": {
+          "name": "Reading Group",
+          "capacity": 2
+        }
+      },
+      {
+        "rowNumber": 7,
+        "status": "skipped",
+        "reason": "Class \"Arabic Club\" already exists in database",
+        "recordId": "61024ae9-4cea-464a-8ab8-871f3f6517ce",
+        "raw": {
+          "name": "Arabic Club",
+          "capacity": "3",
+          "teacher_name": "ليلى محمود",
+          "teacher_email": "LAYLA.MAHMOUD@example.com"
+        },
+        "normalized": {
+          "name": "Arabic Club",
+          "capacity": 3
+        }
+      },
+      {
+        "rowNumber": 8,
+        "status": "skipped",
+        "reason": "Duplicate class \"grade 1 a\" in CSV",
+        "raw": {
+          "name": "grade 1 a",
+          "capacity": "3",
+          "teacher_name": "Ahmed Hassan",
+          "teacher_email": "ahmed.hassan@example.com"
+        },
+        "normalized": {
+          "name": "grade 1 a",
+          "capacity": 3
+        }
+      },
+      {
+        "rowNumber": 9,
+        "status": "skipped",
+        "reason": "Duplicate class \"GRADE 1 A\" in CSV",
+        "raw": {
+          "name": "GRADE 1 A",
+          "capacity": "5",
+          "teacher_name": "Ahmed Hassan",
+          "teacher_email": "ahmed.hassan@example.com"
+        },
+        "normalized": {
+          "name": "GRADE 1 A",
+          "capacity": 5
+        }
+      },
+      {
+        "rowNumber": 10,
+        "status": "rejected",
+        "reason": "Teacher with email \"rania.fathy@example.com\" not found",
+        "raw": {
+          "name": "Art Club",
+          "capacity": "2",
+          "teacher_name": "Rania Fathy",
+          "teacher_email": "rania.fathy@example.com"
+        },
+        "normalized": {
+          "name": "Art Club",
+          "capacity": 2
+        }
+      },
+      {
+        "rowNumber": 11,
+        "status": "rejected",
+        "reason": "Invalid class capacity: \"two\"",
+        "raw": {
+          "name": "Music Club",
+          "capacity": "two",
+          "teacher_name": "Mona Ali",
+          "teacher_email": "mona.ali@example.com"
+        },
+        "normalized": {
+          "name": "Music Club"
+        }
+      },
+      {
+        "rowNumber": 12,
+        "status": "rejected",
+        "reason": "Invalid class capacity: \"0\"",
+        "raw": {
+          "name": "Sports Club",
+          "capacity": "0",
+          "teacher_name": "Omar Samir",
+          "teacher_email": "omar.samir@example.com"
+        },
+        "normalized": {
+          "name": "Sports Club"
+        }
+      },
+      {
+        "rowNumber": 13,
+        "status": "rejected",
+        "reason": "Ambiguous teacher name \"Nour Mohamed\" matches 2 records",
+        "raw": {
+          "name": "History Club",
+          "capacity": "2",
+          "teacher_name": "Nour Mohamed",
+          "teacher_email": ""
+        },
+        "normalized": {
+          "name": "History Club",
+          "capacity": 2
+        }
+      },
+      {
+        "rowNumber": 14,
+        "status": "skipped",
+        "reason": "Class \"Coding Club\" already exists in database",
+        "recordId": "bd75d79b-f966-4263-b929-3903a4f6f55c",
+        "raw": {
+          "name": "Coding Club",
+          "capacity": "2",
+          "teacher_name": "Mona Ali",
+          "teacher_email": "omar.samir@example.com"
+        },
+        "normalized": {
+          "name": "Coding Club",
+          "capacity": 2
+        }
+      },
+      {
+        "rowNumber": 15,
+        "status": "rejected",
+        "reason": "Invalid class capacity: \"2.5\"",
+        "raw": {
+          "name": "Math Club",
+          "capacity": "2.5",
+          "teacher_name": "Ahmed Hassan",
+          "teacher_email": "ahmed.hassan@example.com"
+        },
+        "normalized": {
+          "name": "Math Club"
+        }
+      },
+      {
+        "rowNumber": 16,
+        "status": "rejected",
+        "reason": "Missing required class name",
+        "raw": {
+          "name": "",
+          "capacity": "2",
+          "teacher_name": "Mona Ali",
+          "teacher_email": "mona.ali@example.com"
+        }
+      }
+    ]
+  },
+  "students": {
+    "totalRows": 0,
+    "created": 0,
+    "skipped": 0,
+    "rejected": 0,
+    "rows": []
+  },
+  "reportFile": "data/reports/upload-1794948567391.json"
+}

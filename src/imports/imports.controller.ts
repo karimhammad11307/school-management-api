@@ -1,4 +1,16 @@
-import { Body, Controller, HttpCode, HttpStatus, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  HttpCode,
+  HttpStatus,
+  Post,
+  UploadedFiles,
+  UseGuards,
+  UseInterceptors,
+} from '@nestjs/common';
+import { FilesInterceptor } from '@nestjs/platform-express';
+import 'multer';
+import type { Express } from 'express';
 import {
   ApiBearerAuth,
   ApiForbiddenResponse,
@@ -32,5 +44,17 @@ export class ImportsController {
   @ApiOkResponse({ description: 'Import completed and JSON report generated' })
   run(@Body() dto: RunImportDto) {
     return this.importsService.runImport(dto);
+  }
+
+  @Post('upload')
+  @HttpCode(HttpStatus.OK)
+  @Roles(UserRole.ADMIN)
+  @UseInterceptors(FilesInterceptor('files'))
+  @ApiOperation({
+    summary: 'Upload CSV files to import teachers, classes, and students (Admin only)',
+  })
+  @ApiOkResponse({ description: 'Files imported and entities returned' })
+  upload(@UploadedFiles() files: Express.Multer.File[]) {
+    return this.importsService.uploadAndImport(files);
   }
 }
