@@ -1,0 +1,17 @@
+meta {
+  name: 4.6 Reduce Class 2 Capacity
+  type: http
+  seq: 19
+}
+
+patch {
+  url: {{baseUrl}}/classes/{{class2Id}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "capacity": 0
+  }
+}

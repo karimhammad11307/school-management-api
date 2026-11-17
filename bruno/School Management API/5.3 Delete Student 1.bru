@@ -1,0 +1,11 @@
+meta {
+  name: 5.3 Delete Student 1
+  type: http
+  seq: 22
+}
+
+delete {
+  url: {{baseUrl}}/students/{{studentId}}
+  body: none
+  auth: inherit
+}

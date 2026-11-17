@@ -1,0 +1,17 @@
+meta {
+  name: 6.1 Initial Import (Empty Domain Tables)
+  type: http
+  seq: 26
+}
+
+post {
+  url: {{baseUrl}}/imports/run
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "reportName": "initial-import.json"
+  }
+}

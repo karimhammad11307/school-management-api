@@ -1,0 +1,9 @@
+info:
+  name: 5.6 Delete Teacher
+  type: http
+  seq: 25
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/teachers/{{teacherId}}"
+  auth: inherit

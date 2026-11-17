@@ -1,0 +1,11 @@
+meta {
+  name: 5.2 Delete Teacher with Classes
+  type: http
+  seq: 21
+}
+
+delete {
+  url: {{baseUrl}}/teachers/{{teacherId}}
+  body: none
+  auth: inherit
+}

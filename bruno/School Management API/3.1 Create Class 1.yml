@@ -1,0 +1,24 @@
+info:
+  name: 3.1 Create Class 1
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{baseUrl}}/classes"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Math 101",
+        "capacity": 1,
+        "teacherId": "{{teacherId}}"
+      }
+
+script:
+  res: |-
+    if (res.status === 201 && res.body.id) {
+      bru.setVar("classId", res.body.id);
+      bru.setEnvVar("classId", res.body.id);
+    }

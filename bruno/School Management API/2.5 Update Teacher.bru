@@ -1,0 +1,17 @@
+meta {
+  name: 2.5 Update Teacher
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{baseUrl}}/teachers/{{teacherId}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Dr. Tariq Nabil Updated"
+  }
+}

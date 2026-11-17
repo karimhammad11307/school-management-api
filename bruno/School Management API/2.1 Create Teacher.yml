@@ -1,0 +1,23 @@
+info:
+  name: 2.1 Create Teacher
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/teachers"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Dr. Tariq Nabil",
+        "email": "tariq.nabil@school.local"
+      }
+
+script:
+  res: |-
+    if (res.status === 201 && res.body.id) {
+      bru.setVar("teacherId", res.body.id);
+      bru.setEnvVar("teacherId", res.body.id);
+    }

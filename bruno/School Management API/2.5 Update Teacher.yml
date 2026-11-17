@@ -1,0 +1,15 @@
+info:
+  name: 2.5 Update Teacher
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/teachers/{{teacherId}}"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Dr. Tariq Nabil Updated"
+      }

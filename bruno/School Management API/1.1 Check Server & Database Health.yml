@@ -1,0 +1,9 @@
+info:
+  name: 1.1 Check Server & Database Health
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}/health"
+  auth: none

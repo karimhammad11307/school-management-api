@@ -1,0 +1,19 @@
+meta {
+  name: 4.2 Enroll Student 2 into Full Class 1
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/students
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Sara Ali",
+    "email": "sara.ali@school.local",
+    "classId": "{{classId}}"
+  }
+}

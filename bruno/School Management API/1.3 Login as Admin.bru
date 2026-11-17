@@ -1,0 +1,25 @@
+meta {
+  name: 1.3 Login as Admin
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "admin@school.local",
+    "password": "Admin123!"
+  }
+}
+
+script:post-response {
+  if (res.status === 200 && res.body.accessToken) {
+    bru.setVar("token", res.body.accessToken);
+    bru.setEnvVar("token", res.body.accessToken);
+  }
+}

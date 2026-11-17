@@ -1,0 +1,17 @@
+info:
+  name: 4.2 Enroll Student 2 into Full Class 1
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{baseUrl}}/students"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Sara Ali",
+        "email": "sara.ali@school.local",
+        "classId": "{{classId}}"
+      }

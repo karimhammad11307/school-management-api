@@ -1,0 +1,11 @@
+meta {
+  name: 1.4 Verify Authenticated User
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/auth/me
+  body: none
+  auth: inherit
+}

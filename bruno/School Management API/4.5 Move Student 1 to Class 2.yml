@@ -1,0 +1,15 @@
+info:
+  name: 4.5 Move Student 1 to Class 2
+  type: http
+  seq: 18
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/students/{{studentId}}"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "classId": "{{class2Id}}"
+      }

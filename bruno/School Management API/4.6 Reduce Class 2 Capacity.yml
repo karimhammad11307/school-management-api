@@ -1,0 +1,15 @@
+info:
+  name: 4.6 Reduce Class 2 Capacity
+  type: http
+  seq: 19
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/classes/{{class2Id}}"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "capacity": 0
+      }

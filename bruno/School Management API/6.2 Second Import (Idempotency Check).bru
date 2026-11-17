@@ -1,0 +1,17 @@
+meta {
+  name: 6.2 Second Import (Idempotency Check)
+  type: http
+  seq: 27
+}
+
+post {
+  url: {{baseUrl}}/imports/run
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "reportName": "second-import.json"
+  }
+}

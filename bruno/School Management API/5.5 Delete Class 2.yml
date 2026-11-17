@@ -1,0 +1,9 @@
+info:
+  name: 5.5 Delete Class 2
+  type: http
+  seq: 24
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/classes/{{class2Id}}"
+  auth: inherit

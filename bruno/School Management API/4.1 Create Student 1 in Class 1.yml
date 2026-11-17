@@ -1,0 +1,24 @@
+info:
+  name: 4.1 Create Student 1 in Class 1
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{baseUrl}}/students"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@school.local",
+        "classId": "{{classId}}"
+      }
+
+script:
+  res: |-
+    if (res.status === 201 && res.body.id) {
+      bru.setVar("studentId", res.body.id);
+      bru.setEnvVar("studentId", res.body.id);
+    }

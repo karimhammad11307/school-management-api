@@ -1,0 +1,16 @@
+info:
+  name: 2.2 Test Duplicate Teacher Email
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/teachers"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Another Tariq",
+        "email": "TARIQ.NABIL@SCHOOL.LOCAL"
+      }

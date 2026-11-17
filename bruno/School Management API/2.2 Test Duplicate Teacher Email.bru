@@ -1,0 +1,18 @@
+meta {
+  name: 2.2 Test Duplicate Teacher Email
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/teachers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Another Tariq",
+    "email": "TARIQ.NABIL@SCHOOL.LOCAL"
+  }
+}

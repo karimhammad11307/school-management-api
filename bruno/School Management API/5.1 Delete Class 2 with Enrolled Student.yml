@@ -1,0 +1,9 @@
+info:
+  name: 5.1 Delete Class 2 with Enrolled Student
+  type: http
+  seq: 20
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/classes/{{class2Id}}"
+  auth: inherit
