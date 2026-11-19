@@ -1,8 +1,8 @@
-# 🏫 School Management REST API (Backend)
+#  School Management REST API (Backend)
 
 Backend REST API for the School Management System, developed with **NestJS 12**, **TypeORM 0.3**, and **PostgreSQL 16**.
 
-> 📌 **Looking for the full system overview?** See the [Root README](../README.md) or the comprehensive [Architecture Guide](../PROJECT_GUIDE.md).
+>  **Looking for the full system overview?** See the [Root README](../README.md) or the comprehensive [Architecture Guide](../PROJECT_GUIDE.md).
 
 ---
 
@@ -58,7 +58,7 @@ The API will be available at:
 
 ---
 
-## 🔑 Demo Personas
+##  Demo Personas
 
 | Role | Email | Password |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ The API will be available at:
 
 ---
 
-## 📊 CSV Import Processing
+##  CSV Import Processing
 
 - **Upload Endpoint**: `POST /imports/upload` (accepts multipart file uploads of `teachers.csv`, `classes.csv`, `students.csv`).
 - **Batch Run Endpoint**: `POST /imports/run` (processes files in `data/source/`).
