@@ -1,4 +1,4 @@
-# 🏫 School Management REST API
+# 🏫 School Management REST API (Backend)
 
 [![NestJS](https://img.shields.io/badge/NestJS-v12.x-E0234E?logo=nestjs&logoColor=white)](https://nestjs.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-v5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -9,7 +9,6 @@
 [![Vitest](https://img.shields.io/badge/Tests-Vitest-FCC72B?logo=vitest&logoColor=black)](https://vitest.dev/)
 
 > An enterprise-grade, high-concurrency School Management REST API built with **NestJS**, **TypeORM**, and **PostgreSQL**. Featuring multi-tier **Role-Based Access Control (RBAC)**, ACID database transactions with **pessimistic write locking**, an industrial **RFC-4180 CSV import engine**, and full OpenAPI/Swagger documentation.
-
 ---
 
 ## 📑 Table of Contents
