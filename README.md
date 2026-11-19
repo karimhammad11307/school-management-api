@@ -2,8 +2,6 @@
 
 Backend REST API for the School Management System, developed with **NestJS 12**, **TypeORM 0.3**, and **PostgreSQL 16**.
 
->  **Looking for the full system overview?** See the [Root README](../README.md) or the comprehensive [Architecture Guide](../PROJECT_GUIDE.md).
-
 ---
 
 ## ⚡ Quick Start
@@ -75,4 +73,4 @@ The API will be available at:
 - **Batch Run Endpoint**: `POST /imports/run` (processes files in `data/source/`).
 - **Reports Directory**: `data/reports/` (persists structured JSON execution summaries).
 
-For detailed documentation, refer to the [Root README](../README.md).
+
